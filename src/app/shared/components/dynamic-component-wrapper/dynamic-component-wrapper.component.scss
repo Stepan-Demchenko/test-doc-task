@@ -1,0 +1,37 @@
+.dynamic-wrapper {
+  position: absolute;
+}
+
+.content-projection {
+  padding: 20px;
+  border-radius: 5px;
+  cursor: move;
+  z-index: 99;
+  background-color: lightgreen;
+
+  &__opacity {
+    opacity: 0.7;
+  }
+}
+
+.close-btn {
+  opacity: 1 !important;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  background-color: unset;
+  color: red;
+  transition: 0.3s;
+  border: unset;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}

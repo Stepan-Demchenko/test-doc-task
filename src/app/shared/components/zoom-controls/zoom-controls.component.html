@@ -1,0 +1,5 @@
+<div class="controls-wrapper">
+  <button (click)="increaseZoom()" class="control-btn control-btn__increase">+</button>
+  <p class="current-zoom">{{(currentZoom$ | async)! | zoom | number}}</p>
+  <button (click)="decreaseZoom()" class="control-btn control-btn__decrease">-</button>
+</div>

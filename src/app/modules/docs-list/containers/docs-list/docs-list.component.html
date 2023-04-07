@@ -1,0 +1,16 @@
+<section class="container"
+         [ngStyle]="{'transform': 'scale(' + (scale$ | async) + ')'}"
+         *ngIf="(docImagesUrls$ | async) as documents"
+         #documentsContainer>
+  <ng-container *ngIf="documents.length">
+    <ng-container *ngFor="let doc of documents">
+      <app-doc-page appVisibleDocument
+                    [id]="doc.id"
+                    [debounceTime]="1000"
+                    [threshold]="0.5"
+                    (visibilityChange)="visibleDocumentChanged(doc.id)"
+                    [pictureDocument]="doc">
+      </app-doc-page>
+    </ng-container>
+  </ng-container>
+</section>

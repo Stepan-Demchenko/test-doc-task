@@ -1,0 +1,22 @@
+.context-menu-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 99;
+  background: #CCC;
+  border-radius: 5px;
+  gap: 5px;
+
+  .button-menu {
+    background-color: transparent;
+    border: unset;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: grey;
+    }
+  }
+}

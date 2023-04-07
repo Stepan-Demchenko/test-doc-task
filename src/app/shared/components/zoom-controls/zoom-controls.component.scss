@@ -1,0 +1,28 @@
+.controls-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.current-zoom {
+  margin: unset;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.control-btn {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  border: unset;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  &__increase {
+    background-color: cornflowerblue;
+  }
+
+  &__decrease {
+    background-color: red;
+  }
+}

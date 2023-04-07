@@ -1,0 +1,17 @@
+<app-dynamic-component-wrapper
+  [completeEdit]="!!content"
+  [config]="config"
+  #containerRef>
+  <section>
+    <img *ngIf="content"
+         [src]="content"
+         class="preview-image"
+         alt="Preview uploaded image">
+    <input type="file"
+           style="display: none"
+           accept="image/jpeg, image/png, image/jpg"
+           (change)="uploadFile($event)"
+           #fileInput>
+    <button *ngIf="isCanUploadFile" (click)="fileInput.click()">Upload Image</button>
+  </section>
+</app-dynamic-component-wrapper>

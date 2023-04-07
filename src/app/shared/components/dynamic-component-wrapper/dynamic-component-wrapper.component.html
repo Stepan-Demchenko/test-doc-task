@@ -1,0 +1,10 @@
+ <section class="dynamic-wrapper"
+           appDragElement
+           [ngStyle]="{'top': config.y, 'left':config.x }"
+           [parentContainer]="config.parentElementContainer">
+   <button (click)="close.emit()" class="close-btn" aria-description="close button">X</button>
+   <div class="content-projection"
+        [ngClass]="{'content-projection__opacity': completeEdit}">
+        <ng-content></ng-content>
+   </div>
+  </section>

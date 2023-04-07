@@ -1,0 +1,31 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  box-shadow: 2px 2px 10px grey;
+  background-color: lightgreen;
+  z-index: 99;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    font-size: 28px;
+    margin: unset;
+  }
+}
+
+.save-btn {
+  background-color: dodgerblue;
+  border: unset;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 15px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+}

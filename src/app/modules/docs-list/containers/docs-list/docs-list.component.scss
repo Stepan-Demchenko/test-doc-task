@@ -1,0 +1,23 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 100px;
+  align-items: center;
+  transition: 0.4s;
+}
+
+
+.drag-element {
+  top: 0;
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+  color: white;
+  position: absolute;
+  z-index: 99;
+}

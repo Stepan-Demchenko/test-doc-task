@@ -1,0 +1,14 @@
+ <app-dynamic-component-wrapper [config]="config"
+                                [completeEdit]="disabledInput"
+                                (close)="removeComponent.emit()"
+                                #containerRef>
+   <textarea autofocus class="input-field"
+             *ngIf="!disabledInput"
+             [disabled]="disabledInput"
+             [(ngModel)]="content"
+             cols="1"
+             (keydown.enter)="completeTypeText()"
+             placeholder="Type text here">
+   </textarea>
+   <p *ngIf="disabledInput" class="typed-text">{{content}}</p>
+ </app-dynamic-component-wrapper>

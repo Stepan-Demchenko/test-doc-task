@@ -1,0 +1,6 @@
+<section class="document-page" (contextmenu)="openContextMenu($event)" #container>
+  <ng-content></ng-content>
+  <img [src]="pictureDocument.urlToPictureDoc" alt="Doc image">
+  <ng-template #contextMenuRef></ng-template>
+  <ng-template #dynamicComponentsRef></ng-template>
+</section>

@@ -1,0 +1,10 @@
+<section appClickOutside
+         class="context-menu-wrapper"
+         [ngStyle]="{'top': positions.y, 'left':positions.x }"
+         (clickOutside)="close.emit()">
+  <button class="button-menu"
+          *ngFor="let menuItem of menuItems"
+          (click)="clickOnAction($event, menuItem.action)">
+    {{menuItem.title}}
+  </button>
+</section>
