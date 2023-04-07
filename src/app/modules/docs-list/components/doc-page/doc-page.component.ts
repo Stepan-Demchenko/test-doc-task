@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 import { ContextMenuService } from '../../../../shared/services/context-menu.service';
 import { Subject, takeUntil, tap } from 'rxjs';
 import { ContextMenuActions } from '../../enums/context-menu-actions';
-import { MENU_LIST } from '../../constarts/menu-list';
 import { PasteDynamicComponentService } from '../../../../shared/services/paste-dynamic-component.service';
 import { TextComponent } from '../../../../shared/components/text-component/text.component';
 import { PictureDocument } from '../../../../shared/models/picture-document';
+import { MENU_LIST } from '../../constants/menu-list';
 
 @Component({
   selector: 'app-doc-page',

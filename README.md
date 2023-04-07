@@ -1,27 +1,25 @@
 # TestDoc
+Application allow user to add an annotation (picture or inscription) to any page of the document. Documents represent of png files.
+Documents retrieves by using http request to the json file which placed by path '/assets/data/'.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+#Services
+ContextMenuService implement create and close context menu. DocumentService retrieve documents over Http. PasteDynamicComponentService 
+implements dynamic creation of annotations on the clicked area of the document. ZoomContentService implements store of current zoom/scale of page.
 
-## Development server
+#Store
+Used as storage is service placed by path 'src/app/shared/services/dynamic-components-store.service.ts'. In the store stored 
+all created annotation component. The service also allows us to remove particular component by its id and show inside console
+all created annotation with their number of document, type, content, size and coordinates.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#Containers
+DocsListComponent is represent all documents retrieves from the server, also inside this component place logic to detect which document in the view port
+and saving document id inside route url. After the refresh the page, it scrolls to the concrete document by its id stored inside route url. 
+Also this component subscribe to the change of zoom and implemented it.
 
-## Code scaffolding
+#Directives
+Created directives for the drag element within the particular container, ClickOutsideDirective directive in case when need some action if user clicked 
+outside particular element. VisibleDocumentDirective directive in case when need to watch of visibility of concrete element.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#Annotation
+Used ImageComponent and TextComponent as annotations components. Wrapped by DynamicComponentWrapperComponent. In the DynamicComponentWrapperComponent
+used DragElementDirective for the drag created annotations by document.

@@ -1,6 +1,7 @@
 <app-dynamic-component-wrapper
   [completeEdit]="!!content"
   [config]="config"
+  (close)="removeComponent.emit()"
   #containerRef>
   <section>
     <img *ngIf="content"
