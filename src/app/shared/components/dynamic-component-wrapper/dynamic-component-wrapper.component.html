@@ -1,5 +1,7 @@
  <section class="dynamic-wrapper"
            appDragElement
+           appClickOutside
+           (clickOutside)="clickedOutside.emit()"
            [ngStyle]="{'top': config.y, 'left':config.x }"
            [parentContainer]="config.parentElementContainer">
    <button (click)="close.emit()" class="close-btn" aria-description="close button">X</button>

@@ -7,4 +7,5 @@ export interface DynamicComponent {
   config: DragComponentConfig;
   removeComponent: EventEmitter<unknown>;
   content: string;
+  onClickOutsideAnnotation: ()=> void;
 }

@@ -30,4 +30,10 @@ export class TextComponent implements DynamicComponent {
       this.disabledInput = true;
     }
   }
+
+  onClickOutsideAnnotation(): void {
+    if (!this.content.length){
+      this.removeComponent.emit();
+    }
+  }
 }

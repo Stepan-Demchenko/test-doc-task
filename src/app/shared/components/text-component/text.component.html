@@ -1,6 +1,7 @@
  <app-dynamic-component-wrapper [config]="config"
                                 [completeEdit]="disabledInput"
                                 (close)="removeComponent.emit()"
+                                (clickedOutside)="onClickOutsideAnnotation()"
                                 #containerRef>
    <textarea autofocus class="input-field"
              *ngIf="!disabledInput"

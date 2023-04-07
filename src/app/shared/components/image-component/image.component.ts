@@ -46,4 +46,10 @@ export class ImageComponent implements DynamicComponent {
       this.isCanUploadFile = false;
     }
   }
+
+  onClickOutsideAnnotation(): void {
+    if (!this.content.length){
+      this.removeComponent.emit();
+    }
+  }
 }
